@@ -1,57 +1,22 @@
 class Nabeatsu
-    def initialize(maxlength,stupid_number)
+    def initialize(maxlength,stupid_key_num)
         @maxlength = maxlength
-        @stupid_number = stupid_number
+        @stupid_key_num = stupid_key_num
     end
     
-    def stupid
+    def nabeatsu_counting
         i = 1
         maxlength = @maxlength
-        stupid_number = @stupid_number
+        stupid_key_num = @stupid_key_num
         for i in 1..maxlength do
-            i_str = i.to_s
-            if i % stupid_number == 0 || i_str.include?(stupid_number.to_s)
+            if i % stupid_key_num == 0 || i.to_s.include?(stupid_key_num.to_s)
                 puts "stupit"
-                else
+            else
                 puts i
-                i += 1
             end
         end
-        end
     end
-    
-a = Nabeatsu.new(50,4) #いくつまで数えるか, stupidになる数字をそれぞれ設定
-a.stupid()
+end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+nabeatsu = Nabeatsu.new(50,3) #いくつまで数えるか, stupidになる数字をそれぞれ設定
+nabeatsu.nabeatsu_counting()
