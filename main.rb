@@ -20,7 +20,6 @@ class Nabeatsu
         end
     end
     
-    
 a = Nabeatsu.new(50,4) #いくつまで数えるか, stupidになる数字をそれぞれ設定
 a.stupid()
 
