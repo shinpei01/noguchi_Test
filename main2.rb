@@ -1,3 +1,17 @@
+class Test
+  require './benefit'
+  include Benefit
+end
+puts "ss"
+alice = Test.new
+alice.test
+
+=begin
+o = Object.new()
+o.extend Greetable
+o.greet_to
+=end
+
 =begin
 require 'active_record'
 
@@ -26,7 +40,7 @@ class Nabeatsu
         @maxlength = maxlength
         @stupid_number = stupid_number
     end
-    
+
     def stupid
         i = 1
         maxlength = @maxlength
@@ -53,12 +67,12 @@ a.stupid()
 
 #puts "東京都" !~ /埼玉/
 
-
+=begin
 class AdressChecker
     def initialize(input_adress)
         @input_adress = input_adress
     end
-    
+
     def tokyouCheck
         puts @input_adress.match(/東京都/)
         if @input_adress.match(/東京都/).to_s == "東京都"
@@ -72,38 +86,4 @@ end
 
 a = AdressChecker.new("埼玉県上尾市１−１−１")
 a.tokyouCheck()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+=end
